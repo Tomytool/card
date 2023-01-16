@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: cornflowerblue;
+  width: 100vw;
+  height: 100vh;
+}
+
+.tarjeta {
+  width: 250px;
+  height: 350px;
+  position: relative;
+  box-shadow: 5px 5px 15px 1px #000000;
+}
+.tarjeta img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.tarjeta .presentacion {
+  width: 93%;
+  height: 93%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  background-color: white;
+  opacity: 0;
+}
+
+@-webkit-keyframes aparicion {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes aparicion {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.tarjeta:hover .presentacion {
+  -webkit-animation-name: aparicion;
+          animation-name: aparicion;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.presentacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+}
+.presentacion .separador {
+  width: 90%;
+  height: 3px;
+  background-color: blue;
+  margin-left: 5%;
+}
+.presentacion .social {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.presentacion .social svg {
+  cursor: pointer;
+}
+
+svg:hover {
+  fill: red;
+}/*# sourceMappingURL=style.css.map */

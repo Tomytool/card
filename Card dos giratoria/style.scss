@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;   
+}
+body {
+    background: #112031;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+}
+
+.tarjeta {
+    position: relative;
+    width:180px;
+    height: 250px;    
+    border-radius: 15px;
+}
+
+.tarjeta div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    transition: 1s;
+    border-radius: 15px;
+}
+
+.tarjeta .frontal {
+    background: #288ca0;
+    transform: perspective(500px) rotateY(0deg);
+}
+
+.tarjeta .reverso {
+    background: #682fc4;
+    transform: perspective(500px) rotateY(180deg);
+}
+
+
+.tarjeta:hover .frontal {
+   
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.tarjeta:hover .reverso {
+   
+    transform: perspective(500px) rotateY(360deg);
+}
+
+.card div h1 {
+    font-size: 100px;
+    color: #f1f1f1;
+}
+.frontal{
+    position: relative;
+    text-align: center;
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        top: 0;
+        left: 0;
+        border-radius: 15px;
+    }
+    h2{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        padding: 10px 0 10px 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+
+
+    }
+}
+
+.reverso{
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    text-align: center;
+    p{
+    padding: 0 10px 0 10px;
+    color: white;
+    
+    }
+    
+}
