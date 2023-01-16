@@ -25,7 +25,7 @@ body .card .card__imagen {
   position: absolute;
   width: 250px;
   height: 198px;
-  left: calc(50% - 250px / 2);
+  left: calc(50% - 125px);
   bottom: 82px;
 }
 body .card .card__imagen img {
@@ -59,11 +59,10 @@ body .card .card__texto .boton a {
 
 .card:hover img {
   transform: translate(0px, -60px);
-  transition: transform 2s;
+  transition: all 2s;
 }
 .card:hover .card__texto {
   opacity: 1;
-  transition: opacity 0.1s;
   transition-delay: 1s;
 }
 
